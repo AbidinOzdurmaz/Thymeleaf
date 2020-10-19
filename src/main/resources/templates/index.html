@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+<body>
+<div class="container">
+
+    <table class="table" style="margin-top: 30px">
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+        </thead>
+        <tbody>
+        	<tr	th:each="user:${users}">
+        		<td th:text="${user.firstName}"></td>
+        		<td th:text="${user.lastName}"></td>        	
+        	</tr> 	
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
